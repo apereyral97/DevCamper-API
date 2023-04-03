@@ -1,6 +1,8 @@
 const Bootcamp = require('../models/Bootcamp');
 const ErrorResponse = require('../utils/errorResponse');
 const asyncHandler = require('../middleware/async');
+
+
 //Desc -> Get all bootcapms
 //@routes GET /api/v1/bootcamps
 //@access Public
@@ -44,7 +46,7 @@ exports.updateBootcamp = asyncHandler(async (req, res, next) => {
         res.status(200).json({ success:true, data: bootcamp });
 })
 
-//Desc -> DElete bootcapms
+//Desc -> Delete bootcapms
 //@routes DELETE /api/v1/bootcamps/:id
 //@access Private
 exports.deleteBootcamp = asyncHandler(async (req, res, next) => {
